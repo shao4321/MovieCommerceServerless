@@ -1,0 +1,123 @@
+.toggler.nav {
+  top: 1em;
+  z-index: 4;
+}
+
+.hamburger.nav {
+  top: 0.5em;
+  z-index: 3;
+}
+
+.nav-up {
+  top: -100vh !important;
+}
+
+.navbar {
+  display: block;
+  padding: 1.5em;
+  min-width: 100%;
+  margin: 0 auto;
+  min-height: 10vh;
+  position: sticky;
+  top: 0;
+  background-color: #000000bb;
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 15px #666;
+  border-radius: 0 0 10px 10px;
+  transition: top 0.5s ease;
+  z-index: 999;
+}
+
+.dropdown {
+  margin: 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin-top: 3em;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    transition: all 0.3s ease;
+    a {
+      text-decoration: none;
+      font-size: 1.25rem;
+      color: $baseFontColor;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.nav-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 2;
+}
+
+.link-container {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 0.75em;
+  }
+  &:hover {
+    text-shadow: 0 0 7px $neonBase, 0 0 10px $neonBase, 0 0 21px $neonBase,
+      0 0 42px $neonShadow, 0 0 82px $neonShadow, 0 0 92px $neonShadow,
+      0 0 102px $neonShadow, 0 0 151px $neonShadow;
+  }
+}
+
+.searchBar {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .searchBtn {
+    height: 2.5rem;
+    width: 20%;
+    min-width: 6em;
+  }
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: 6rem;
+  .searchText {
+    padding: 1em;
+    height: 2.8rem;
+    font-size: 1.125rem;
+    border-radius: 1.4rem;
+    border: 2px solid #000;
+    outline: none;
+    width: 70%;
+    transition: width 0.3s ease-out;
+    &:active,
+    &:focus {
+      width: 95%;
+    }
+  }
+  .deleteText {
+    color: $baseFontColor;
+    background-color: #222;
+    width: 20%;
+    min-width: 10em;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $baseFontColor;
+      color: #222;
+    }
+  }
+}

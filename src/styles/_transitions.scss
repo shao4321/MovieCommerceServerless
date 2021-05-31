@@ -1,0 +1,82 @@
+@import "./variables";
+
+.vid-appear,
+.header-appear,
+.nav-page-enter {
+  transform: translateX($menu-starting-left);
+}
+
+.vid-appear-done,
+.header-appear-done {
+  transform: translateX($menu-ending-left);
+  transition: all $timeout ease-in-out;
+}
+
+.vid-exit,
+.header-exit {
+  transform: translateX($menu-ending-left);
+}
+
+.vid-exit-active,
+.header-exit-active {
+  transform: translateX($menu-starting-left);
+  transition: all $timeout ease-in-out;
+}
+
+.nav-page-enter {
+  transform: translateY($menu-starting-left);
+}
+
+.nav-page-enter-done {
+  transform: translateY($menu-ending-left);
+  transition: all 200ms ease-in-out;
+}
+
+.nav-page-exit {
+  transform: translateY($menu-ending-left);
+}
+
+.nav-page-exit-active {
+  transform: translateY($menu-starting-left);
+  transition: all 200ms ease-in-out;
+}
+
+.home-appear,
+.menu-enter,
+.movie-banner-enter,
+.cart-container-enter,
+.dropdown-box-inner-enter,
+.movie-cart-btn-enter {
+  opacity: 0;
+}
+
+.menu-enter-done,
+.movie-banner-enter-done,
+.cart-container-enter-done,
+.dropdown-box-inner-enter-done,
+.movie-cart-btn-enter-done {
+  opacity: 1;
+  transition: all $timeout ease;
+}
+
+.cart-container-exit-active,
+.dropdown-box-inner-exit-active,
+.movie-cart-btn-exit-active {
+  opacity: 0;
+  transition: all $timeout ease;
+}
+
+.menu-exit,
+.movie-banner-exit {
+  position: absolute;
+  left: 9999px;
+}
+
+.menu-exit-done {
+  opacity: 0;
+}
+
+.home-appear-done {
+  opacity: 1;
+  transition: all 450ms ease;
+}

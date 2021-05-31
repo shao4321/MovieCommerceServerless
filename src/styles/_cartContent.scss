@@ -1,0 +1,132 @@
+.cart-wrapper-flex {
+  min-height: 60vh;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+  }
+  .effectButton {
+    height: 10%;
+    min-width: 5em;
+    width: 20%;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.4s ease;
+    &:hover {
+      color: $baseFontColor;
+    }
+  }
+}
+
+.cart-wrapper {
+  padding: 2em;
+  display: grid;
+  grid: auto/ 1fr;
+  grid-gap: 3rem;
+  text-align: center;
+  .cart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 1em;
+    min-height: 32em;
+    transition: all 0.3s ease-in;
+    box-shadow: 5px 8px 15px $shopping-cart-red;
+    background-image: linear-gradient(45deg, white, black);
+    border-radius: 10px;
+    .item-num {
+      color: $baseFontColor;
+      font-size: 2rem;
+      transition: all 0.4s ease;
+    }
+    img {
+      width: 30%;
+      border-radius: 5px;
+    }
+    .cart-item-title {
+      max-width: 10em;
+      min-width: 10em;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.5rem;
+      transition: font-size 0.4s ease;
+      text-decoration: none;
+      color: #222;
+    }
+    .cart-item-price {
+      max-width: 6em;
+      min-width: 4em;
+      text-align: center;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    .delete-icon {
+      cursor: pointer;
+      font-size: 1.8rem;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+    &:hover {
+      background-image: linear-gradient(45deg, black, white);
+      box-shadow: 5px 8px 15px cyan;
+      color: $baseFontColor;
+      .cart-item-title {
+        color: $baseFontColor;
+      }
+      .item-num {
+        color: #222;
+      }
+    }
+  }
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  padding: 1em;
+  .button {
+    font-size: 1rem;
+  }
+}
+
+.price-container {
+  width: 80%;
+  text-align: right;
+  margin: auto;
+  margin-bottom: 2em;
+  padding: 1.5em;
+  border-radius: 15px;
+  background-color: #000;
+  color: $baseFontColor;
+  .msc {
+    font-weight: 400;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-size: 1.2rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+    strong {
+      font-size: 1.1rem;
+      text-decoration: underline;
+    }
+  }
+  hr {
+    margin: 1em auto;
+  }
+}

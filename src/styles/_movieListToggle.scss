@@ -1,0 +1,42 @@
+.movieToggles {
+  margin: 1em auto;
+  width: 90%;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .viewToggleBtns {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    svg {
+      transform: scale(1.2);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.5);
+      }
+      &:focus,
+      &:active {
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+  .sortLabel {
+    color: #333;
+  }
+  .selectSort {
+    width: 150px;
+    text-align-last: right;
+    padding-right: 25px;
+    direction: rtl;
+  }
+}
+
+.viewActive {
+  background-color: #000;
+  color: #fff;
+}

@@ -1,0 +1,96 @@
+.movie-content-box {
+  position: relative;
+  margin: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 80%;
+    margin: 0.5em auto;
+  }
+  .movie-details {
+    color: $baseFontColor;
+    margin-top: 1em;
+    h4,
+    h5 {
+      margin: 0;
+    }
+    .movie-title {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 0.5em;
+      font-weight: 800;
+    }
+    .ratings {
+      background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png")
+        repeat-x;
+      font-size: 0;
+      height: 21px;
+      line-height: 0;
+      overflow: hidden;
+      text-indent: -999em;
+      width: 110px;
+      margin: 0 auto;
+
+      &-rating {
+        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png")
+          repeat-x;
+        background-position: 0 100%;
+        float: left;
+        height: 21px;
+        display: block;
+      }
+    }
+    .movie-main-title {
+      font-style: italic;
+      margin: 1em 0;
+    }
+    .overview {
+      border-bottom: 1px solid $baseFontColor;
+      margin-bottom: 0.5em;
+      ~ p {
+        text-indent: 15%;
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .trailer {
+      margin: 1em auto;
+      color: lightblue;
+      text-decoration: none;
+      display: inline-block;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s ease-in;
+      &:hover {
+        color: #eee;
+      }
+      span {
+        margin-left: 0.3em;
+      }
+    }
+    .cart-btn {
+      width: 80%;
+      margin: 0.5em auto;
+    }
+  }
+  .arrow {
+    position: sticky;
+    left: 90%;
+    bottom: 20%;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    font-size: 2rem;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0.2em;
+    z-index: 5;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+}

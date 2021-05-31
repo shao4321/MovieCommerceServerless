@@ -1,0 +1,15 @@
+.footer-container {
+  padding: 0.5em;
+  background-color: #222;
+  min-height: 10vh;
+  p {
+    margin: 1.5em 0;
+    font-size: 1.125rem;
+    text-align: center;
+    color: $baseFontColor;
+    span {
+      font-size: 1.2rem;
+      color: rgb(255, 132, 132);
+    }
+  }
+}
