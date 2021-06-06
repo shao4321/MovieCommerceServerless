@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import { Button, FormControlLabel, Checkbox } from "@material-ui/core";

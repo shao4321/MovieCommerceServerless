@@ -21,7 +21,6 @@ const useScroll = (headerBar, setAtTop) => {
     return () => {
       document.removeEventListener("mousewheel", scrollEffectHeader);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -29,7 +28,6 @@ const useScroll = (headerBar, setAtTop) => {
     return () => {
       window.onscroll = null;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 };
 

@@ -31,7 +31,6 @@ const MovieSearchMain = ({ searchVal }) => {
   // Set searched and matched movies from all the splitted movies on page change
   useEffect(() => {
     setSearchMovies(splitMovies[searchMoviesPage]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchMoviesPage, splitMovies]);
 
   // Filter and set the searched and matched movies then split it
@@ -54,8 +53,6 @@ const MovieSearchMain = ({ searchVal }) => {
 
     // Set the first page of matched movies
     setSearchMovies(currMatches.slice(0, moviesPerPage));
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchVal]);
 
   const props = {
