@@ -1,19 +1,17 @@
 import "App.css";
-import { useState, useRef, createContext } from "react";
+import { useState, useRef, createContext, useEffect } from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Home from "components/home";
 import About from "components/about";
 import Movies from "components/movies";
 import Contact from "components/contact";
 import MovieContent from "components/movies/MovieContent";
-import useFetch from "components/hooks_functions/useFetch";
 import useScroll from "components/hooks_functions/useScroll";
 import Cart from "components/cart";
-import useFetchAll from "components/hooks_functions/useFetchAll";
 import fetchStorage from "components/hooks_functions/fetchStorage";
+import { allMovies } from "data/movies.json";
 
 // Current data base has 20 pages of movie lists
-const url = "http://localhost:5000/movieList";
 const totalPages = 20;
 
 export const MoviesContext = createContext();
@@ -32,26 +30,25 @@ const App = () => {
   const [atTop, setAtTop] = useState(true);
   useScroll(headerBar, setAtTop);
 
-  // Fetch Movies
-  const {
-    datas: allMovies,
-    genres,
-    ...allMovieStatus
-  } = useFetchAll(url, totalPages);
-  const {
-    data: movies,
-    setData: setMovies,
-    ...movieStatus
-  } = useFetch(url, moviesPage);
+  // Get all Movies and Genres
+  const [movies, setMovies] = useState([]);
+  const genres = Object.values(allMovies).reduce((set, movieList) => {
+    for (let movie of movieList) {
+      set = new Set([...set, ...new Set(movie["genres"])]);
+    }
+    return set;
+  }, new Set());
+
+  // Update Display Movies On every page change
+  useEffect(() => {
+    setMovies(allMovies[`movieList${moviesPage}`]);
+  }, [moviesPage]);
 
   const [input, setInput] = useState("");
   const [matchMovies, setMatchMovies] = useState([]);
   const [selectedGenres, setSelectedGenres] = useState(new Set());
 
   const props = {
-    movieStatus,
-    allMovieStatus,
-    url,
     totalPages,
     allMovies,
     genres,

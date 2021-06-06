@@ -4,13 +4,11 @@ import { useState, useContext, useEffect } from "react";
 import { MoviesContext } from "App";
 
 const MovieSearchMain = ({ searchVal }) => {
-  const { allMovies, allMovieStatus, totalPages, setMatchMovies } =
-    useContext(MoviesContext);
+  const { allMovies, totalPages, setMatchMovies } = useContext(MoviesContext);
 
   const [searchMoviesPage, setSearchMoviesPage] = useState(1);
   const [searchMovies, setSearchMovies] = useState([]);
 
-  const { isPendingAll, hasErrorAll, errorMessageAll } = allMovieStatus;
   const [splitMovies, setSplitMovies] = useState({});
   const [pages, setPages] = useState(null);
   const moviesPerPage = 18;
@@ -30,7 +28,7 @@ const MovieSearchMain = ({ searchVal }) => {
     return splittedPages;
   };
 
-  // Set a set a searched and matched movies from all the splitted movies on page change
+  // Set searched and matched movies from all the splitted movies on page change
   useEffect(() => {
     setSearchMovies(splitMovies[searchMoviesPage]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -39,9 +37,9 @@ const MovieSearchMain = ({ searchVal }) => {
   // Filter and set the searched and matched movies then split it
   useEffect(() => {
     let currMatches = [];
-    if (typeof allMovies !== "undefined" && !hasErrorAll) {
+    if (typeof allMovies !== "undefined") {
       for (let i = 1; i <= totalPages; i++) {
-        const matchList = allMovies[i].filter((movie) =>
+        const matchList = allMovies[`movieList${i}`].filter((movie) =>
           movie.title.toLowerCase().startsWith(searchVal.toLowerCase())
         );
         if (matchList) {
@@ -61,9 +59,6 @@ const MovieSearchMain = ({ searchVal }) => {
   }, [searchVal]);
 
   const props = {
-    isPendingAll,
-    hasErrorAll,
-    errorMessageAll,
     pages,
     searchMoviesPage,
     setSearchMoviesPage,

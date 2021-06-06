@@ -1,6 +1,6 @@
 import { usePagination } from "@material-ui/lab/Pagination";
 
-const Pagination = (props) => {
+const PaginationSearch = (props) => {
   const { moviesPage, setMoviesPage, totalPages } = props;
 
   const validatePageNav = (changeCntType) => {
@@ -77,4 +77,4 @@ const Pagination = (props) => {
   );
 };
 
-export default Pagination;
+export default PaginationSearch;
