@@ -1,23 +1,23 @@
 @import "./variables";
 
-.vid-appear,
+.bg-appear,
 .header-appear,
 .nav-page-enter {
   transform: translateX($menu-starting-left);
 }
 
-.vid-appear-done,
+.bg-appear-done,
 .header-appear-done {
   transform: translateX($menu-ending-left);
   transition: all $timeout ease-in-out;
 }
 
-.vid-exit,
+.bg-exit,
 .header-exit {
   transform: translateX($menu-ending-left);
 }
 
-.vid-exit-active,
+.bg-exit-active,
 .header-exit-active {
   transform: translateX($menu-starting-left);
   transition: all $timeout ease-in-out;
