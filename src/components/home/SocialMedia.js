@@ -3,9 +3,8 @@ import { HomeContext } from "./index";
 
 const SocialMedia = () => {
   const { menuSize, menuToggled } = useContext(HomeContext);
-  // To be changed after website is published
   const myUrlTextSnippet = "Shao Movie Store";
-  const myUrl = "https://codepen.io/freeCodeCamp/full/qRZeGZ";
+  const myUrl = "https://moviecommerce.herokuapp.com/";
 
   return (
     <div>
