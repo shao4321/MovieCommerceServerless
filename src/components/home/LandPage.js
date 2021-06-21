@@ -5,9 +5,9 @@ import HomeContents from "./HomeContents";
 const LandPage = ({ menuSize, menuToggled }) => {
   return (
     <div className="landpage">
-      <CSSTransition in={true} timeout={350} classNames="vid" appear>
+      <CSSTransition in={true} timeout={350} classNames="header" appear>
         <img
-          className="vid"
+          className="bg"
           src={Poster}
           style={{ top: menuToggled && `-${menuSize}px` }}
         />
