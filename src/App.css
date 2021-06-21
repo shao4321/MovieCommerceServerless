@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-.vid-appear,
+.bg-appear,
 .header-appear,
 .nav-page-enter {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
 
-.vid-appear-done,
+.bg-appear-done,
 .header-appear-done {
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -16,13 +16,13 @@
   transition: all 350ms ease-in-out;
 }
 
-.vid-exit,
+.bg-exit,
 .header-exit {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.vid-exit-active,
+.bg-exit-active,
 .header-exit-active {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -1688,7 +1688,7 @@
   color: #fff;
 }
 
-.landpage .vid {
+.landpage .bg {
   position: absolute;
   top: 0;
   left: 0;
