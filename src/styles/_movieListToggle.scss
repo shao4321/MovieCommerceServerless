@@ -1,9 +1,10 @@
 .movieToggles {
   margin: 1em auto;
-  width: 90%;
+  width: 100%;
   min-height: 120px;
   display: flex;
   flex-direction: column;
+  row-gap: 1rem;
   justify-content: space-between;
   align-items: center;
   .viewToggleBtns {

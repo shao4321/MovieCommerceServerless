@@ -27,23 +27,14 @@ const Search = () => {
 
   return (
     <div className="searchBar">
-      <div className="input-box">
         <input
-          type="text"
+          type="search"
           placeholder="Search Movies..."
           className="searchText"
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={(e) => e.key === "Enter" && handleSearch()}
           value={input}
         />
-        <Button
-          className="deleteText"
-          onClick={handleClearSearch}
-          style={clearTextBtnStyle()}
-        >
-          clear search
-        </Button>
-      </div>
       <Button
         variant="contained"
         color="default"

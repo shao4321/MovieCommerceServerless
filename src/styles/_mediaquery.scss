@@ -78,8 +78,8 @@
     grid: 70% 30% / repeat(2, 1fr);
     grid-gap: 5px;
     grid-template-areas:
-      "leftBar topRightBar"
-      "leftBar bottomRightBar";
+      'leftBar topRightBar'
+      'leftBar bottomRightBar';
   }
 }
 
@@ -155,16 +155,12 @@
     }
   }
   .searchBar {
-    .input-box {
-      height: auto;
-      flex-direction: row;
-      justify-content: space-evenly;
-      .searchText {
-        width: 60%;
-        &:active,
-        &:focus {
-          width: 70%;
-        }
+    .searchText {
+      width: 50%;
+      transition: width 0.3s ease-out;
+      &:active,
+      &:focus {
+        width: 70%;
       }
     }
   }
@@ -172,6 +168,8 @@
     .movieToggles {
       flex-direction: row;
       min-height: auto;
+      justify-content: start;
+      column-gap: 10rem;
       .movieCnt {
         font-size: 1.5rem;
         border-bottom: 2px solid grey;
@@ -200,9 +198,9 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      "header header"
-      "poster content"
-      "poster content";
+      'header header'
+      'poster content'
+      'poster content';
   }
 
   .form {

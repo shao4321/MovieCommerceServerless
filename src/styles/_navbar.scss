@@ -88,36 +88,12 @@
   }
 }
 
-.input-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.searchText {
+  padding: 0 1rem 0 1rem;
+  height: 2.8rem;
+  font-size: 1.125rem;
+  border-radius: 1.4rem;
+  border: 2px solid #000;
+  outline: none;
   width: 70%;
-  height: 6rem;
-  .searchText {
-    padding: 1em;
-    height: 2.8rem;
-    font-size: 1.125rem;
-    border-radius: 1.4rem;
-    border: 2px solid #000;
-    outline: none;
-    width: 70%;
-    transition: width 0.3s ease-out;
-    &:active,
-    &:focus {
-      width: 95%;
-    }
-  }
-  .deleteText {
-    color: $baseFontColor;
-    background-color: #222;
-    width: 20%;
-    min-width: 10em;
-    transition: all 0.3s ease;
-    &:hover {
-      background-color: $baseFontColor;
-      color: #222;
-    }
-  }
 }

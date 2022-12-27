@@ -31,7 +31,6 @@ const ListMovies = ({ movie }) => {
         <CartAddRemove props={props} />
       </div>
       <div className="overview">
-        <h2>Overview</h2>
         <p>{movie.overview.split(".")[0] + "."}</p>
       </div>
     </div>
