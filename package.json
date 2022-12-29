@@ -1,5 +1,5 @@
 {
-  "name": "reactprojects",
+  "name": "movielord",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -36,7 +36,7 @@
     "json-server": "json-server --watch src/data/db.json --port 5000",
     "dev": "concurrently \"react-scripts start\" \"npm run json-server\""
   },
-  "author": "shaowee",
+  "author": "leeshaowee",
   "license": "ISC",
   "browserslist": {
     "production": [
