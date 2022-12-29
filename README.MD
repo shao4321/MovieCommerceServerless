@@ -46,9 +46,7 @@ You're sections headers will be used to reference location of destination.
    - React Transition Group
 
 > SASS has provided me with easy styling syntax and functions with the use of nesting and mixins.
-
 > Some components on the website are built by Material-UI. These components has certain CSS properties that supports modern web browser styles.
-
 > Ever since I have started on React, I feel that this is an essentially frontend web framework that I have to master.
 
 [Back To The Top](#top)
@@ -57,17 +55,17 @@ You're sections headers will be used to reference location of destination.
 
 ## How To Use
 
-<br/>
+---
 
-#### Installation
+### Installation
 
-```
+```code
 npm install
 ```
 
 #### Usage
 
-```
+```code
 npm start
 ```
 
@@ -80,7 +78,7 @@ npm start
 👤 **Lee Shao Wee**
 
 - Website: [URL](https://leeshaowee.netlify.app/)
-- Github: [@shao4321](https://github.com/shao4321)
+- Github: [@shaowi](https://github.com/shaowi)
 
 ---
 
