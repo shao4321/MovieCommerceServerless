@@ -834,6 +834,7 @@
 }
 .bannerContents .movie-banner .movie-title {
   font-size: 1rem;
+  padding: 1rem;
 }
 .bannerContents .overview {
   width: 100%;
